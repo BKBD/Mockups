@@ -1,0 +1,51 @@
+// Monochrome
+$mono-base-color: #c4c4c2;
+$highlighted: #91918f;
+$disabled: invert($highlighted); // Comment this line out if you want to set a custom colour
+$disabled-font: $highlighted; // Comment this line out if you want to set a custom colour
+$selected: #45433e;
+$hover: #cec9ba;
+// Coloured
+$background: white;
+$green-inactive: #9fce0e;
+$green-active: lighten($green-inactive, 30); // Comment this line out if you want to set a custom colour
+$coloured-disabled: #454343;
+$blue-inactive: #22afc4;
+$blue-active: lighten($blue-inactive, 30); // Comment this line out if you want to set a custom colour
+// Select active theme here
+$base: #0064ff;
+$theme-active: null;
+$theme-inactive: null;
+// $base-font-color: white; // For automatic readability comment this line out and uncomment the one below. This will have varying results
+$base-font-color: invert(mix($theme-active, $theme-inactive));
+// Global
+html * {
+  color: $base-font-color;
+  background-color: $background;
+}
+// Menus
+// Mix-ins
+$menu-items: (30, hello);
+$derp: length($menu-items);
+$menu-item-default-width: 100% / $menu-items;
+// Menu itself
+.menu {
+  width: 100%;
+  height: 5%;
+  display: flex;
+  flex-flow: row;
+  background-color: $base;
+}
+
+.menu-item {
+  width: $menu-item-default-width;
+  background-color: $theme-inactive;
+  color: $base-font-color;
+  -webkit-transition: border-right 0.5s, border-left 1s;
+  -moz-transition: border-right 0.5s, border-left 1s;
+  -ms-transition: border-right 0.5s, border-left 1s;
+  -o-transition: border-right 0.5s, border-left 1s;
+  transition: border-right 0.5s, border-left 1s;
+}
+
+.menu-item

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" >
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width" initial-scale="1.0">
+        <link rel=stylesheet href="css/default.css" type="text/css">
+        <link rel=stylesheet href="node_modules/angular-material/angular-material.min.css" type="text/css">
+        <script src="node_modules/angular/angular.min.js" type="application/javascript"></script>
+        <script src="node_modules/angular-animate/angular-animate.min.js" type="application/javascript"></script>
+        <script src="node_modules/angular-aria/angular-aria.min.js"></script>
+        <script src="node_modules/angular-messages/angular-messages.min.js"></script>
+        <script src="node_modules/angular-material/angular-material.min.js" type="application/javascript"></script>
+        <script src="js/controller.js" type="application/javascript"></script>
+        <title>Title</title>
+    </head>
+    <body ng-app="index">
+        <md-menu-bar>
+            <md-menu>
+                <md-button class="md-button" ng-click="$mdOpenMenu($event)">Open Menu</md-button>
+                <md-menu-content>
+                    <md-menu-item>
+                        <md-button ng-click="print">Print</md-button>
+                    </md-menu-item>
+                </md-menu-content>
+            </md-menu>
+        </md-menu-bar>
+    </body>
+</html>
